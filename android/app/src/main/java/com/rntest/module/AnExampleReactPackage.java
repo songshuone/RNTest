@@ -18,6 +18,7 @@ public class AnExampleReactPackage implements ReactPackage {
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
         List<NativeModule> moduleList = new ArrayList<NativeModule>();
         moduleList.add(new ToastModule(reactContext));
+        moduleList.add(new MyIntentModule(reactContext));
         return moduleList;
     }
 

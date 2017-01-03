@@ -3,4 +3,4 @@
  */
 "use strict"
 import {NativeModules} from 'react-native'
-export default NativeModules.ToastAndroidModule
+export default NativeModules.MyIntentModule;

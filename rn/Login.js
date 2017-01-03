@@ -5,8 +5,10 @@ import {
     TextInput,
     Image,
     ToastAndroid,
+    NativeModules,
 } from 'react-native';
 import  AppMain from './AppMain'
+import {startActivityForResult} from './rn_activity_interactive'
 import Constant from './constant/Constant'
 import Button from './componet/Button'
 export default class extends Component {
@@ -19,17 +21,20 @@ export default class extends Component {
     }
 
     jumpToast() {
-        const {navigator}=this.props;
-        if (navigator) {
-            navigator.push({
-                component: AppMain,
-                name: 'AppMain',
-                params: {
-                    name: 'AppMain',
-                }
-            });
-
-        }
+        startActivityForResult();
+      
+        
+        // const {navigator}=this.props;
+        // if (navigator) {
+        //     navigator.push({
+        //         component: AppMain,
+        //         name: 'AppMain',
+        //         params: {
+        //             name: 'AppMain',
+        //         }
+        //     });
+        //
+        // }
     }
 
     // <Button onPress={this.jumpToast} text={'Login'}/>
@@ -65,6 +70,7 @@ export default class extends Component {
                 <View>
 
                     <Button onPress={()=>{
+                    this.jumpToast();
                         ToastAndroid.show('login',ToastAndroid.SHORT);
                         }} text={'登录'}/>
 
