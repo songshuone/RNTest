@@ -26,7 +26,7 @@ var styles = StyleSheet.create({
       top: 110,
       left: (cell_w-320)/2,
       backgroundColor: '#fff',
-      height: 330,
+      height: 400,
       borderRadius: 20,
     },
     comCulture: {
@@ -42,10 +42,10 @@ var styles = StyleSheet.create({
     },
     formStyle: {
       backgroundColor:'#F4F3F3',
-      marginTop: 30,
+      marginTop: 10,
       marginLeft: 10,
       width: 300,
-      height: 120,
+      height: 200,
       borderRadius: 8,
     },
     formInput:{
@@ -72,11 +72,13 @@ var styles = StyleSheet.create({
     },
     btn: {
       flexDirection:'row',
+        justifyContent:'center',
+        height:60,
       //backgroundColor:'transparent',
     },
 
     btnWrap:{
-      marginTop: 150,
+      marginTop: 0,
       borderRadius: 5,
     },
   
@@ -87,22 +89,20 @@ var styles = StyleSheet.create({
         width: 150,
         height: 50,
         borderWidth: 1,
-        borderColor: '#fff',
-        paddingTop: 15,
+        borderColor: 'grey',
+        paddingTop: 5,
         marginRight: 20,
-        flex: 1,
         textAlign: 'center',
       },
     loginBtn2: {
       fontSize: 20,
       color: '#C7D634',
-      backgroundColor: '#fff',
+      backgroundColor: 'grey',
       width: 150,
       height: 50,
       borderWidth: 1,
       borderColor: '#fff',
-      paddingTop: 15,
-      flex: 1,
+      paddingTop: 5,
       textAlign: 'center',
     },
       

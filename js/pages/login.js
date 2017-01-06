@@ -89,7 +89,7 @@ class LoginPage extends Component {
     render() {
         return (
             <View style={[commonStyle.wrapper, loginStyle.loginWrap]}>
-                <Image source={require('../imgs/icons/bg.png')} style={{resizeMode: 'stretch'}}>
+                <Image source={require('../imgs/icons/bg.png')} resizeMode={'stretch'}>
                     <View style={loginStyle.loginMain}>
                         <View style={loginStyle.loginMainCon}>
                             <View style={loginStyle.comCulture}>
@@ -99,19 +99,20 @@ class LoginPage extends Component {
                             <View style={loginStyle.formStyle}>
                                 <View style={[loginStyle.formInput,loginStyle.formInputSplit]}>
                                     <Image source={require('../imgs/icons/user.png')}
-                                           style={{width:25,height:25,resizeMode: 'contain'}}/>
+                                           resizeMode={'stretch'}
+                                           style={{width:25,height:25}}/>
                                     <TextInput
                                         ref="login_name"
                                         placeholder='username'
-                                        style={loginStyle.loginInput}
+                                        style={[loginStyle.loginInput,{height:45,alignSelf:'center'}]}
                                         onChangeText={this.onChangeName.bind(this)}/>
                                 </View>
                                 <View style={loginStyle.formInput}>
-                                    <Image source={require('../imgs/icons/passicon.png')}
-                                           style={{width:25,height:25,resizeMode: 'contain'}}/>
+                                    <Image source={require('../imgs/icons/passicon.png')}resizeMode={'contain'}
+                                           style={{width:25,height:25}}/>
                                     <TextInput
                                         ref="login_psw"
-                                        style={loginStyle.loginInput}
+                                        style={[loginStyle.loginInput,{height:45,alignSelf:'center'}]}
                                         secureTextEntry={true}
                                         placeholder='password'
                                         onChangeText={this.onChangePswd.bind(this)}/>
@@ -120,7 +121,8 @@ class LoginPage extends Component {
                                     <View style={loginStyle.forget}>
                                         <View>
                                             <Image source={require('../imgs/icons/prompt.png')}
-                                                   style={{width:15,height:15,resizeMode: 'contain',marginRight:10}}/>
+                                                   style={{width:15,height:15,marginRight:10}}
+                                                   resizeMode={'contain'}/>
                                         </View>
                                         <View >
                                             <Text style={{color:'#62a2e0', backgroundColor: 'white'}}>forget
@@ -129,9 +131,9 @@ class LoginPage extends Component {
                                     </View>
                                 </View>
                             </View>
-                            <View style={loginStyle.btn}>
+                            <View style={[loginStyle.btn,]}>
                                 <View style={loginStyle.btnWrap}>
-                                    <Text style={loginStyle.loginBtn1} onPress={this.handleLogin.bind(this)}>Log
+                                    <Text style={loginStyle.loginBtn2} onPress={this.handleLogin.bind(this)}>Log
                                         in</Text>
                                 </View>
                                 <View style={loginStyle.btnWrap}>
